@@ -17,3 +17,4 @@ export default class CategoriasApi {
     return data;
   }
 }
+
