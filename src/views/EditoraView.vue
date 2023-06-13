@@ -9,7 +9,7 @@ export default {
     };
   },
   async created() {
-    this.editoras = await EditorasApi.buscarTodasAsEditoras();
+    this.editoras = await editorasApi.buscarTodasAsEditoras();
   },
   methods: {
     async salvar() {
@@ -43,7 +43,7 @@ export default {
   <ul>
     <li v-for="editora in editoras" :key="editora.id">
       <span @click="editar(editora)">
-        ({{ editora.id }}) - {{ editora.descricao }} -
+        ({{ editora.nome }}) - {{ editora.descricao }} -
       </span>
       <button @click="excluir(editora)">X</button>
     </li>
